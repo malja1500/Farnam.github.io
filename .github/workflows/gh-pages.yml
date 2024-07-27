@@ -21,7 +21,8 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      # - name: Build
+      - name: Build
+        run: cp index.html ./public
       #   run: hugo --minify
 
       - name: Deploy
