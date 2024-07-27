@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: mkdir ./public && shopt -s extglob && cp -r !(public) public/
+        run: mkdir public && find . -mindepth 1 -maxdepth 1 ! -name public -exec cp -r {} public/ \;
       #   run: hugo --minify
 
       - name: Deploy
