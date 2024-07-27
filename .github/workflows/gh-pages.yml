@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: mkdir ./public && cp -R * ./public
+        run: mkdir ./public && cp -r !(public) ./public
       #   run: hugo --minify
 
       - name: Deploy
